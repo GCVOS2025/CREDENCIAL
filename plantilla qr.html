@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Constancia GC</title>
+  <style>
+    :root {
+      --violeta: #9e1663;
+      --amarillo: #282828;
+      --fondo: #f7f7f7;
+      --texto: #2c3e50;
+    }
+    body {
+      background: var(--fondo);
+      color: var(--texto);
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      max-width: 700px;
+      margin: auto;
+    }
+    .logo {
+      width: 160px;
+      margin-bottom: 30px;
+    }
+    h1 { color: var(--violeta); margin-bottom: 20px; }
+    h2, h3 { color: var(--amarillo); margin-bottom: 15px; }
+    button {
+  margin: 15px 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #636aaf;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  transform: scale(1);
+}
+
+button:hover {
+  background-color: #4f5690;
+  transform: scale(1.05); 
+}
+    #alumnos {
+      margin-top: 20px;
+      text-align: left;
+      display: none;
+      white-space: pre-wrap;
+      background: #f0f0f0;
+      padding: 20px;
+      border-radius: 10px;
+      max-height: 300px;
+      overflow-y: auto;
+      font-family: monospace;
+    }
+    footer {
+      font-size: 14px;
+      color: #7f8c8d;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="contenido">
+    <!-- Logo oficial -->
+    <img src="logo-godoy-cruz.svg" alt="Logo Municipalidad de Godoy Cruz" class="logo">
+
+    <h1>EMBAJADOR DE LA DIGITALIZACIÓN</h1>
+    <h3>ALUMNO INSCRIPTO AL CONCURSO GODOY CRUZ + VOS 2025</h3>
+    <h3>Autorizado a solicitar la Adhesión al Boleto Digital</h3>
+
+    <!-- Botones de acción -->
+    <button onclick="mostrarListado()">Ver listado de alumnos inscriptos</button>
+    <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScJiSrDwxr6Lb49IjBzJe0evCWvQ8JxGG6I7hepLSRS8pGNkQ/viewform?usp=header', '_blank')">
+      Ingresar a formulario de adhesión
+    </button>
+
+    <!-- Listado de alumnos -->
+    <div id="alumnos">
+* ARDOAIM, CAROLINA - 70038123
+* Becerra, Analía Salomé - 49569236
+* Castro, Silvia Antonia - 63852963
+* Cussi, Tatiana - 45852963
+* Guicciardini, Héctor - 52369852
+* Leonelli, Romina Angela - 42589589
+* Lucatelli, Lucas Leandro - 85963852
+* Luque, Estefanía Laura - 48963258
+* Luque, Guillermo Daniel - 41525256
+* Luque, Pablo Guillermo - 42909527
+* Luque, Sofía VictoriaQ - 70852369
+* Méndez, Anahí E. - 45636983
+* Méndez, Anahí E. - 45636985
+* Méndez, Anahí E. - 45636987
+* Méndez, María Sol - 56236923
+* Salvador, Yanina Alejandra - 45842527
+* Sánchez Morón, Raúl Ernesto - 52963258
+* Santoni, Raul - 56898956
+* Silveti, Macarena - 85963852
+* Vidal, Alejandro - 41100000
+    </div>
+
+    <img src="http://www.godoycruz.gob.ar/wp-content/uploads/2025/07/pie.png" alt="Pie GC" style="margin-top: 30px; max-width: 100%; height: auto;">
+
+  </div>
+
+  <script>
+    function mostrarListado() {
+      const lista = document.getElementById("alumnos");
+      lista.style.display = lista.style.display === "none" ? "block" : "none";
+    }
+  </script>
+</body>
+</html>
